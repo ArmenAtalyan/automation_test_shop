@@ -1,6 +1,7 @@
 package utils;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeTest;
 
 public class StartDriver {
     private static WebDriver driver = null;
@@ -15,7 +16,6 @@ public class StartDriver {
             driver.navigate().to(URL);
         }
     }
-
     public static StartDriver getInstance(){
         System.out.println("Before init driver");
         if(startDriverInstance == null){

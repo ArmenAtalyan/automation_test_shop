@@ -10,6 +10,9 @@ public class LoginPage {
     @FindBy(css = "#u_0_b_FJ")
     private WebElement accountButton;
 
+    public LoginPage(){
+        PageFactory.initElements(StartDriver.getInstance().getDriver(), this);
+    }
 
     public void clickAccountButton(){
         System.out.println("After init driver");
